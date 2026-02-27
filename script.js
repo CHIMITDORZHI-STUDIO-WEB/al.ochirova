@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_desc: 'Выберите удобный способ связи. Я всегда открыта к диалогу и готова ответить на ваши вопросы.',
             contact_email_label: 'Написать письмо',
             footer_brand: 'Александра Очирова — Бизнес-тренер, Лидер 4Life',
-            copyright: '© 2026 Александра Очирова. Независимый дистрибьютор 4Life (ID: 11197938).'
+            copyright: '© 2026 Александра Очирова. Независимый дистрибьютор 4Life (ID: 11197938).',
+            lang_label: 'RU'
         },
         en: {
             nav_about: 'About',
@@ -75,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
             about_p1: 'Before joining this business, I served in law enforcement for over 17 years. But I reached my first 50,000 rubles of online income from scratch in just six months.',
             about_p2: 'One day I invited 3 people, and since then my network has been continuously growing across many regions, cities, and even countries.',
             about_p3_html: 'Today, my team has <strong>over 250 people</strong>. I built the network once and now receive passive income that gives me freedom and confidence in the future.',
-            stat_mvd: 'Years in Law Enforcement',
-            stat_year: 'Year started with 4Life',
+            stat_mvd: 'Years in Law',
+            stat_year: 'Start in 4Life',
             stat_team: 'Team Members',
             stat_passive: 'Passive',
             stat_income: 'Growing Income',
@@ -106,7 +107,114 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_desc: 'Choose a convenient way to connect. I\'m always open to dialogue and ready to answer your questions.',
             contact_email_label: 'Send an email',
             footer_brand: 'Alexandra Ochirova — Business Coach, 4Life Leader',
-            copyright: '© 2026 Alexandra Ochirova. Independent 4Life Distributor (ID: 11197938).'
+            copyright: '© 2026 Alexandra Ochirova. Independent 4Life Distributor (ID: 11197938).',
+            lang_label: 'EN'
+        },
+        kz: {
+            nav_about: 'Мен туралы',
+            nav_opportunities: 'Мүмкіндіктер',
+            nav_company: 'Компания',
+            nav_contact: 'Байланыс',
+            hero_badge: 'Бизнес-жаттықтырушы және 4Life көшбасшысы',
+            hero_name_html: 'Александра<br><span class="accent-text">Очирова</span>',
+            hero_desc: 'Түрлі елдердегі желіге дейін нөлден тәуекелсіз бизнес құрамын. 4Life компаниясымен ақылды иммунитетке, денсаулыққа және пассивті табысқа инвестициялар.',
+            hero_btn_write: 'Маған жазу',
+            hero_btn_shop: '4Life Дүкені',
+            fc_partners: 'Серіктестер',
+            fc_many: 'Көптеген',
+            fc_countries: 'Елдер мен қалалар',
+            about_badge: 'Менің тарихым',
+            about_title_html: 'Мен <span class="accent-text">бизнеске</span> қалай келдім',
+            about_lead: 'Менің атым Александра, мен Бурятияданмын, 2021 жылдан бері желілік бизнестемін.',
+            about_p1: 'Бұл бизнеске келмес бұрын мен ішкі істер органдарында 17 жылдан астам жұмыс істедім. Бірақ мен нөлден алғашқы 50 000 рубль табысқа жарты жылда шықтым.',
+            about_p2: 'Бірде мен 3 адамды шақырдым, содан бері менің желім көптеген аймақтарда, қалаларда, тіпті елдерде үздіксіз өсіп келеді.',
+            about_p3_html: 'Бүгінгі таңда менің командамда <strong>250-ден астам адам</strong> бар. Мен желіні бір рет құрдым және болашаққа еркіндік пен сенімділік беретін пассивті табыс аламын.',
+            stat_mvd: 'ІІМ қызмет жылдары',
+            stat_year: '4Life-те басталған жыл',
+            stat_team: 'Командадағы адамдар',
+            stat_passive: 'Пассивті',
+            stat_income: 'Өсіп келе жатқан табыс',
+            opp_badge: 'Ынтымақтастық',
+            opp_title_html: 'Бұл модель сізге <span class="accent-text">дәл келеді</span>, егер сіз қаласаңыз:',
+            card1_title: 'Тәуекелсіз бизнес',
+            card1_desc: 'Өз бизнесіңізді ең аз инвестициямен бастаңыз. Толық қолдау және дайын жүйе.',
+            card2_title: 'Алғашқы үлкен ақша',
+            card2_desc: 'Табыстың шегінсіз қатты кіріске қалай жетуге болатындығы туралы қадамдық алгоритм.',
+            card3_title: 'Пассивті табыс',
+            card3_desc: 'Желіңізді бір рет құрыңыз және оның айналымынан көп жылдар бойы тұрақты дивиденд алыңыз.',
+            card4_title: 'Еркіндік және саяхат',
+            card4_desc: 'Әлемнің кез келген нүктесінен онлайн жұмыс жасаңыз. Табысты командамен бірге жаңа көкжиектерді ашыңыз.',
+            card5_title: 'Тұлғалық өсу',
+            card5_desc: 'Үнемі даму, кәсіпкерлердің мықты ортасы және әлеуетіңізді ашу.',
+            card6_title: 'Денсаулық және Anti-Age',
+            card6_desc: 'Озық әзірлемелерге қол жеткізу: ақылды иммунитет, денені жасарту және сапалы ұзақ өмір.',
+            company_badge: 'Серіктес туралы',
+            company_title_html: 'Компания <span class="brand-text">4Life</span>',
+            company_slogan: 'Иммунитет — сіздің денсаулығыңыздың іргетасы!',
+            company_years: 'Мен бір жобада 5 жылдан астам уақыт жүрмін.',
+            company_about_html: '<strong>4Life Research</strong> — The Immune System Company™ (Иммундық жүйе компаниясы). Өмір үшін зерттеу. Бұл сіздің иммунитетіңізді дұрыс жұмыс істеуге үйрететін трансфер факторларына негізделген инновациялық өнімдер.',
+            company_join: 'Менің командама қосылу арқылы сіз тек бизнес-тәлімгерді ғана емес, сонымен қатар отбасыңыздың денсаулығына арналған озық өнімдерге қол жеткізесіз.',
+            company_btn: 'Дүкенді көру',
+            contact_badge: 'Менімен байланыс',
+            contact_title: 'Сапарыңызды бастауға дайынсыз ба?',
+            contact_desc: 'Сөйлесудің ыңғайлы әдісін таңдаңыз. Мен әрқашан диалогқа ашықпын және сұрақтарыңызға жауап беруге дайынмын.',
+            contact_email_label: 'Хат жазу',
+            footer_brand: 'Александра Очирова — Бизнес-жаттықтырушы, 4Life Көшбасшысы',
+            copyright: '© 2026 Александра Очирова. 4Life тәуелсіз дистрибьюторы (ID: 11197938).',
+            lang_label: 'KZ'
+        },
+        zh: {
+            nav_about: '关于我',
+            nav_opportunities: '机会',
+            nav_company: '公司',
+            nav_contact: '联系我',
+            hero_badge: '商业教练 & 4Life 领导人',
+            hero_name_html: '亚历山德拉<br><span class="accent-text">奥奇罗娃 (Alexandra)</span>',
+            hero_desc: '从零开始建立跨国网络的无风险业务。与4Life一起投资于智能免疫力、健康和被动收入。',
+            hero_btn_write: '给我发消息',
+            hero_btn_shop: '4Life 商店',
+            fc_partners: '合作伙伴',
+            fc_many: '许多',
+            fc_countries: '国家和地区',
+            about_badge: '我的故事',
+            about_title_html: '我是如何开始<span class="accent-text">创业</span>的',
+            about_lead: '我叫亚历山德拉，来自俄罗斯布里亚特，自2021年起从事网络业务。',
+            about_p1: '在加入这个行业之前，我在执法机构工作了17年多。但是，我只用了六个月的时间就从零开始实现了最初的 50,000 卢布在线收入。',
+            about_p2: '有一天我邀请了3个人，从那以后，我的网络在许多地区、城市甚至国家不断发展。',
+            about_p3_html: '今天，我的团队有<strong>超过250人</strong>。我只建立了一次网络，现在却获得了被动收入，这给了我对未来的自由和信心。',
+            stat_mvd: '执法部门工作年限',
+            stat_year: '4Life 开始年份',
+            stat_team: '团队成员',
+            stat_passive: '被动',
+            stat_income: '稳定增长收入',
+            opp_badge: '合作机会',
+            opp_title_html: '如果您想实现以下目标，此模式<span class="accent-text">非常适合您</span>：',
+            card1_title: '无风险业务',
+            card1_desc: '以最小的投资开启您的事业。提供全面支持和成熟的系统。',
+            card2_title: '第一桶金',
+            card2_desc: '循序渐进的算法，助您获得可观的收入，且没有收入上限。',
+            card3_title: '被动收入',
+            card3_desc: '一次建立网络，多年来从其营业额中获得稳定的红利。',
+            card4_title: '自由与旅行',
+            card4_desc: '在世界任何地方在线工作。与成功的团队一起开拓新视野。',
+            card5_title: '个人成长',
+            card5_desc: '不断发展，融入强大的企业家圈子，释放您的潜力。',
+            card6_title: '健康与抗衰老',
+            card6_desc: '获得前沿创新成果：智能免疫力、身体年轻化和高质量的长寿。',
+            company_badge: '关于合作伙伴',
+            company_title_html: '<span class="brand-text">4Life</span> 公司',
+            company_slogan: '免疫力是您健康的基础！',
+            company_years: '我参与这个项目已经五年多了。',
+            company_about_html: '<strong>4Life Research</strong> — The Immune System Company™。为生活而研究。基于转移因子的创新产品，教导您的免疫系统正确工作。',
+            company_join: '加入我的团队，您不仅能获得一位业务导师，还能为您的家人获取先进的健康产品。',
+            company_btn: '参观商店',
+            contact_badge: '联系我',
+            contact_title: '准备好开启您的旅程了吗？',
+            contact_desc: '选择一种方便的联系方式。我随时准备进行对话并回答您的问题。',
+            contact_email_label: '发送电子邮件',
+            footer_brand: '亚历山德拉·奥奇罗娃 — 商业教练，4Life 领导人',
+            copyright: '© 2026 亚历山德拉·奥奇罗娃 (Alexandra Ochirova). 独立 4Life 经销商 (ID: 11197938).',
+            lang_label: 'ZH'
         }
     };
 
@@ -131,10 +239,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update lang toggle label
         const langLabel = document.getElementById('langLabel');
-        if (langLabel) {
-            langLabel.textContent = lang === 'ru' ? 'EN' : 'RU';
+        if (langLabel && dict.lang_label) {
+            langLabel.textContent = dict.lang_label;
         }
+
+        // Update active class in dropdown menu
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
     }
+
+    // ═══════════════════════════════════════════
+    // DROPDOWN MENU LOGIC
+    // ═══════════════════════════════════════════
+    const langToggleBtn = document.getElementById('langToggle');
+    const langMenu = document.getElementById('langMenu');
+
+    if (langToggleBtn && langMenu) {
+        // Toggle menu on click
+        langToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langMenu.classList.toggle('show');
+        });
+
+        // Handle option click
+        document.querySelectorAll('.lang-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                const selectedLang = e.target.dataset.lang;
+                setLanguage(selectedLang);
+                langMenu.classList.remove('show');
+            });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langToggleBtn.contains(e.target) && !langMenu.contains(e.target)) {
+                langMenu.classList.remove('show');
+            }
+        });
+    }
+
 
     // ═══════════════════════════════════════════
     // THEME TOGGLE
@@ -161,14 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-        });
-    }
-
-    // Language toggle button
-    const langToggle = document.getElementById('langToggle');
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            setLanguage(currentLang === 'ru' ? 'en' : 'ru');
         });
     }
 

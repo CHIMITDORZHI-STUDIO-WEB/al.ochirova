@@ -358,6 +358,63 @@ h4 {
     font-family: var(--font-body);
 }
 
+.lang-dropdown {
+    position: relative;
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: var(--bg-card);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 140px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.lang-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.lang-option:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-main);
+}
+
+.lang-option.active {
+    color: var(--color-primary);
+    font-weight: 700;
+    background: var(--color-primary-glow);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;

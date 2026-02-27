@@ -104,10 +104,18 @@
                 <button class="toggle-btn" id="themeToggle" title="Тема">
                     <i class="ph ph-sun" id="themeIcon"></i>
                 </button>
-                <!-- Language Toggle -->
-                <button class="toggle-btn lang-toggle" id="langToggle">
-                    <span id="langLabel">EN</span>
-                </button>
+                <!-- Language Dropdown -->
+                <div class="lang-dropdown">
+                    <button class="toggle-btn lang-toggle" id="langToggle" title="Язык">
+                        <span id="langLabel">RU</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <button class="lang-option" data-lang="ru">Русский</button>
+                        <button class="lang-option" data-lang="en">English</button>
+                        <button class="lang-option" data-lang="kz">Қазақша</button>
+                        <button class="lang-option" data-lang="zh">中文</button>
+                    </div>
+                </div>
                 <!-- Mobile Menu -->
                 <button class="mobile-menu-btn" id="menuOpen"><i class="ph ph-list"></i></button>
             </div>
