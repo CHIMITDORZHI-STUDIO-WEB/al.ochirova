@@ -148,7 +148,7 @@
                     Пассивный доход, здоровье и свобода с компанией 4Life.
                 </p>
                 <div class="hero-actions">
-                    <a href="https://wa.me/79085980986" target="_blank" class="btn btn-primary">
+                    <a href="https://t.me/Aleksandra_Ochirova" target="_blank" class="btn btn-primary">
                         <span data-i18n="hero_btn_write">Написать мне</span>
                         <i class="ph ph-arrow-right"></i>
                     </a>
@@ -417,13 +417,31 @@
     <!-- ═══════════════════════════════════════════════ -->
     <!-- QUIZ CTA SECTION -->
     <!-- ═══════════════════════════════════════════════ -->
-    <section class="quiz-section">
+    <section class="quiz-section" id="quiz">
         <div class="container">
-            <div class="quiz-card glass reveal">
-                <h2 data-i18n="quiz_title">Тест: Подходит ли вам сетевой бизнес?</h2>
-                <p data-i18n="quiz_desc">Пройдите короткий тест и получите персональную стратегию.</p>
-                <a href="https://wa.me/79085980986?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B9%D1%82%D0%B8%20%D1%82%D0%B5%D1%81%D1%82"
-                    target="_blank" class="btn btn-accent" data-i18n="quiz_btn">Начать тест</a>
+            <div class="quiz-card glass reveal" id="quizCard">
+                <!-- INTRO SCREEN -->
+                <div id="quizIntro">
+                    <h2 data-i18n="quiz_title">Тест: Подходит ли вам сетевой бизнес?</h2>
+                    <p data-i18n="quiz_desc">Пройдите короткий тест и получите персональную стратегию.</p>
+                    <button class="btn btn-accent" id="quizStartBtn" data-i18n="quiz_btn">Начать тест</button>
+                </div>
+                <!-- QUESTION SCREENS -->
+                <div id="quizQuestions" style="display:none;">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                    </div>
+                    <h3 class="quiz-question-text" id="quizQuestionText"></h3>
+                    <div class="quiz-options" id="quizOptions"></div>
+                </div>
+                <!-- RESULT SCREEN -->
+                <div id="quizResult" style="display:none;">
+                    <div class="quiz-result-icon">🎉</div>
+                    <h2 data-i18n="quiz_result_title">У вас отличный потенциал!</h2>
+                    <p data-i18n="quiz_result_text">Моя система идеально вам подойдёт. Давайте обсудим ваш персональный
+                        план.</p>
+                    <a href="#contact" class="btn btn-accent" data-i18n="quiz_result_btn">Получить стратегию</a>
+                </div>
             </div>
         </div>
     </section>
@@ -442,7 +460,7 @@
                     </blockquote>
                     <p data-i18n="phil_sub">Настройтесь получить новую профессию, новые знания и сразу применять их на
                         практике. Используя готовую систему, вы сможете выйти на стабильный доход.</p>
-                    <a href="https://wa.me/79085980986" target="_blank" class="btn btn-primary"
+                    <a href="https://t.me/Aleksandra_Ochirova" target="_blank" class="btn btn-primary"
                         data-i18n="phil_btn">Начать путь</a>
                 </div>
                 <div class="antifit-block glass reveal" style="--d: 0.2s">

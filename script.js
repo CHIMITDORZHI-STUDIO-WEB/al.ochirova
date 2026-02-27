@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             quiz_title: 'Тест: Подходит ли вам сетевой бизнес?',
             quiz_desc: 'Пройдите короткий тест и получите персональную стратегию.',
             quiz_btn: 'Начать тест',
+            quiz_result_title: '🎉 У вас отличный потенциал!',
+            quiz_result_text: 'Моя система идеально вам подойдёт. Давайте обсудим ваш персональный план.',
+            quiz_result_btn: 'Получить стратегию',
             // Philosophy
             phil_badge: 'Философия результата',
             phil_text: 'Моя система построена на практике, цифрах и реальных кейсах. Вы не будете разбираться сами — вы получите конкретные действия и поддержку.',
@@ -193,6 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
             quiz_title: 'Quiz: Is network business right for you?',
             quiz_desc: 'Take a short quiz and get a personalized strategy.',
             quiz_btn: 'Start quiz',
+            quiz_result_title: '🎉 You have great potential!',
+            quiz_result_text: 'My system will be a perfect fit for you. Let\'s discuss your personal plan.',
+            quiz_result_btn: 'Get your strategy',
             phil_badge: 'Philosophy of results',
             phil_text: 'My system is built on practice, numbers, and real cases. You won\'t figure it out alone — you\'ll get specific actions and support.',
             phil_sub: 'Get ready to gain a new profession, new knowledge, and immediately apply them in practice. Using a proven system, you can achieve stable income.',
@@ -307,6 +313,9 @@ document.addEventListener('DOMContentLoaded', () => {
             quiz_title: 'Тест: Желілік бизнес сізге сәйкес пе?',
             quiz_desc: 'Қысқа тест тапсырып, жеке стратегия алыңыз.',
             quiz_btn: 'Тестті бастау',
+            quiz_result_title: '🎉 Сізде тамаша әлеует бар!',
+            quiz_result_text: 'Менің жүйем сізге тамаша сәйкес келеді. Жеке жоспарыңызды талқылайық.',
+            quiz_result_btn: 'Стратегия алу',
             phil_badge: 'Нәтиже философиясы',
             phil_text: 'Менің жүйем тәжірибеге, сандарға және нақты кейстерге негізделген. Сіз өзіңіз түсінбейсіз — нақты әрекеттер мен қолдау аласыз.',
             phil_sub: 'Жаңа мамандық, жаңа білім алуға және оны бірден тәжірибеде қолдануға дайын болыңыз.',
@@ -421,6 +430,9 @@ document.addEventListener('DOMContentLoaded', () => {
             quiz_title: '测试：网络业务适合您吗？',
             quiz_desc: '参加简短测试，获得个性化策略。',
             quiz_btn: '开始测试',
+            quiz_result_title: '🎉 您具有巨大的潜力！',
+            quiz_result_text: '我的系统非常适合您。让我们讨论您的个人计划。',
+            quiz_result_btn: '获取策略',
             phil_badge: '结果哲学',
             phil_text: '我的系统建立在实践、数据和真实案例之上。您不必独自摸索 — 您将获得具体的行动方案和支持。',
             phil_sub: '准备好获取新的职业、新的知识，并立即在实践中应用。使用成熟的系统，您可以实现稳定的收入。',
@@ -675,5 +687,84 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.5 });
     statValues.forEach(el => statsObserver.observe(el));
+
+    // ═══════════════════════════════════════════
+    // INTERACTIVE QUIZ
+    // ═══════════════════════════════════════════
+    const quizQuestions = {
+        ru: [
+            { q: 'Вы готовы уделять обучению 1-2 часа в день?', opts: ['Да, конечно', 'Нет, у меня нет времени', 'Зависит от результата'] },
+            { q: 'Был ли у вас опыт в бизнесе или продажах?', opts: ['Да, был', 'Нет, я новичок', 'Немного пробовал(а)'] },
+            { q: 'Какая цель по доходу вас интересует?', opts: ['30–50 тысяч рублей', '100–300 тысяч рублей', 'Миллион и больше'] }
+        ],
+        en: [
+            { q: 'Are you ready to dedicate 1-2 hours a day to learning?', opts: ['Yes, of course', 'No, I don\'t have time', 'Depends on the result'] },
+            { q: 'Do you have any experience in business or sales?', opts: ['Yes, I do', 'No, I\'m a beginner', 'I\'ve tried a little'] },
+            { q: 'What income goal interests you?', opts: ['30–50 thousand rubles', '100–300 thousand rubles', 'A million or more'] }
+        ],
+        kz: [
+            { q: 'Күніне 1-2 сағат оқуға дайынсыз ба?', opts: ['Иә, әрине', 'Жоқ, уақытым жоқ', 'Нәтижеге байланысты'] },
+            { q: 'Бизнесте немесе сатуда тәжірибеңіз болды ма?', opts: ['Иә, болды', 'Жоқ, мен жаңадан бастаушымын', 'Аздап байқап көрдім'] },
+            { q: 'Сізді қандай табыс мақсаты қызықтырады?', opts: ['30–50 мың рубль', '100–300 мың рубль', 'Миллион және одан да көп'] }
+        ],
+        zh: [
+            { q: '您愿意每天花1-2小时学习吗？', opts: ['是的，当然', '不，我没有时间', '取决于结果'] },
+            { q: '您有商业或销售经验吗？', opts: ['是的', '不，我是新手', '稍微尝试过'] },
+            { q: '您对什么收入目标感兴趣？', opts: ['3-5万卢布', '10-30万卢布', '一百万及以上'] }
+        ]
+    };
+
+    const quizStartBtn = document.getElementById('quizStartBtn');
+    const quizIntro = document.getElementById('quizIntro');
+    const quizQuestionsEl = document.getElementById('quizQuestions');
+    const quizResult = document.getElementById('quizResult');
+    const quizQuestionText = document.getElementById('quizQuestionText');
+    const quizOptions = document.getElementById('quizOptions');
+    const quizProgressBar = document.getElementById('quizProgressBar');
+
+    let quizStep = 0;
+
+    function showQuizQuestion(step) {
+        const questions = quizQuestions[currentLang] || quizQuestions.ru;
+        const q = questions[step];
+        quizQuestionText.textContent = q.q;
+        quizOptions.innerHTML = '';
+        quizProgressBar.style.width = ((step + 1) / questions.length * 100) + '%';
+
+        q.opts.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option-btn';
+            btn.textContent = opt;
+            btn.addEventListener('click', () => {
+                quizStep++;
+                const questions = quizQuestions[currentLang] || quizQuestions.ru;
+                if (quizStep < questions.length) {
+                    showQuizQuestion(quizStep);
+                } else {
+                    quizQuestionsEl.style.display = 'none';
+                    quizResult.style.display = 'block';
+                    // Update result text with current language
+                    const dict = translations[currentLang];
+                    if (dict) {
+                        quizResult.querySelectorAll('[data-i18n]').forEach(el => {
+                            const key = el.getAttribute('data-i18n');
+                            if (dict[key]) el.textContent = dict[key];
+                        });
+                    }
+                }
+            });
+            quizOptions.appendChild(btn);
+        });
+    }
+
+    if (quizStartBtn) {
+        quizStartBtn.addEventListener('click', () => {
+            quizStep = 0;
+            quizIntro.style.display = 'none';
+            quizQuestionsEl.style.display = 'block';
+            quizResult.style.display = 'none';
+            showQuizQuestion(0);
+        });
+    }
 
 });
