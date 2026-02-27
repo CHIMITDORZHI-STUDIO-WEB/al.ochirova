@@ -919,6 +919,398 @@ h4 {
     }
 }
 
+/* ═══════════════════════════════════ */
+/* Target Audience Section */
+/* ═══════════════════════════════════ */
+.audience-section {
+    padding: 6rem 0;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.audience-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.audience-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+}
+
+.audience-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(240, 195, 65, 0.15), rgba(240, 195, 65, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin: 0 auto 1.5rem;
+}
+
+.audience-card h3 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.audience-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ═══════════════════════════════════ */
+/* Success Timeline Section */
+/* ═══════════════════════════════════ */
+.timeline-section {
+    padding: 6rem 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -33px;
+    top: 1.5rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 0 3px var(--color-primary);
+    z-index: 2;
+}
+
+.timeline-marker.active {
+    width: 20px;
+    height: 20px;
+    left: -35px;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-accent), 0 0 20px rgba(240, 195, 65, 0.4);
+}
+
+.timeline-content {
+    padding: 1.5rem 2rem;
+}
+
+.timeline-content.featured {
+    border-color: var(--color-accent);
+}
+
+.timeline-year {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content.featured .timeline-year {
+    color: var(--color-accent);
+}
+
+.timeline-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ═══════════════════════════════════ */
+/* Quiz CTA Section */
+/* ═══════════════════════════════════ */
+.quiz-section {
+    padding: 4rem 0;
+}
+
+.quiz-card {
+    text-align: center;
+    padding: 4rem 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(240, 195, 65, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.quiz-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.quiz-card p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+.btn-accent {
+    background: var(--color-accent);
+    color: #1a1a1a;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(240, 195, 65, 0.3);
+}
+
+/* ═══════════════════════════════════ */
+/* Philosophy & Anti-fit Section */
+/* ═══════════════════════════════════ */
+.philosophy-section {
+    padding: 6rem 0;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.philosophy-block {
+    padding: 3rem;
+}
+
+.philosophy-quote {
+    margin: 1.5rem 0;
+    padding: 0;
+    border: none;
+}
+
+.philosophy-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-main);
+    font-style: italic;
+}
+
+.philosophy-block>p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.antifit-block {
+    padding: 3rem;
+    border-color: rgba(220, 50, 50, 0.3);
+}
+
+.antifit-block h3 {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.antifit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.antifit-list li {
+    color: var(--text-muted);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    line-height: 1.6;
+}
+
+.antifit-list li:last-child {
+    border-bottom: none;
+}
+
+.antifit-footer {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ═══════════════════════════════════ */
+/* Articles Section */
+/* ═══════════════════════════════════ */
+.articles-section {
+    padding: 6rem 0;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.article-card {
+    padding: 2.5rem;
+    transition: var(--transition);
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+}
+
+.article-tag {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(0, 136, 204, 0.15);
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+}
+
+.article-tag.tag-secondary {
+    background: rgba(0, 203, 169, 0.15);
+    color: var(--color-secondary);
+}
+
+.article-tag.tag-accent {
+    background: rgba(240, 195, 65, 0.15);
+    color: var(--color-accent);
+}
+
+.article-card h3 {
+    color: var(--text-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.article-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.article-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.article-link:hover {
+    color: var(--color-secondary);
+}
+
+/* ═══════════════════════════════════ */
+/* FAQ Section */
+/* ═══════════════════════════════════ */
+.faq-section {
+    padding: 6rem 0;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    gap: 1rem;
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+}
+
+.faq-toggle-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: var(--text-muted);
+}
+
+.faq-item.open .faq-toggle-icon {
+    transform: rotate(45deg);
+    color: var(--color-primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
 /* Footer */
 .footer {
     padding-top: 5rem;
@@ -1232,12 +1624,26 @@ body::after {
 
     .about-section,
     .opportunities-section,
-    .mission-section {
+    .mission-section,
+    .audience-section,
+    .timeline-section,
+    .philosophy-section,
+    .articles-section,
+    .faq-section {
         padding: 4rem 0;
     }
 
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audience-grid,
+    .articles-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1400,6 +1806,68 @@ body::after {
     }
 
     .mission-section {
+        padding: 3rem 0;
+    }
+
+    .audience-grid,
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .audience-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-marker {
+        left: -23px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-marker.active {
+        left: -25px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-content {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .timeline-year {
+        font-size: 1.2rem;
+    }
+
+    .quiz-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .quiz-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .philosophy-block,
+    .antifit-block {
+        padding: 2rem;
+    }
+
+    .article-card {
+        padding: 1.5rem;
+    }
+
+    .faq-question {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .faq-section,
+    .quiz-section,
+    .articles-section {
         padding: 3rem 0;
     }
 }
