@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ═══════════════════════════════════════════
-    // TRANSLATIONS
+    // TRANSLATIONS (RU, EN, KZ, ZH)
     // ═══════════════════════════════════════════
     const translations = {
         ru: {
+            lang_label: 'RU',
             nav_about: 'Обо мне',
-            nav_opportunities: 'Возможности',
+            nav_mission: 'Миссия',
+            nav_benefits: 'Что вы получите',
             nav_company: 'Компания',
             nav_contact: 'Связаться',
-            hero_badge: 'Бизнес-тренер & Лидер 4Life',
+            hero_badge: 'Предприниматель & Лидер 4Life',
             hero_name_html: 'Александра<br><span class="accent-text">Очирова</span>',
-            hero_desc: 'Строю бизнес без рисков с нуля до сети в разных странах. Инвестиции в умный иммунитет, здоровье и пассивный доход с компанией 4Life.',
+            hero_desc: 'Помогаю людям строить бизнес без рисков с нуля по готовой системе. Пассивный доход, здоровье и свобода с компанией 4Life.',
             hero_btn_write: 'Написать мне',
             hero_btn_shop: 'Магазин 4Life',
             fc_partners: 'Партнеров',
@@ -28,21 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_team: 'Человек в команде',
             stat_passive: 'Пассивный',
             stat_income: 'Растущий доход',
-            opp_badge: 'Сотрудничество',
-            opp_title_html: 'Эта модель вам <span class="accent-text">точно подойдет</span>, если вы хотите:',
-            card1_title: 'Бизнес без рисков',
-            card1_desc: 'Начните свое дело с минимальными вложениями. Полная поддержка и готовая система.',
-            card2_title: 'Первые большие деньги',
-            card2_desc: 'Пошаговый алгоритм, как выйти на солидный доход без потолка в заработке.',
-            card3_title: 'Пассивный доход',
-            card3_desc: 'Выстраивайте сеть один раз и получайте стабильный дивиденд от ее оборота многие годы.',
-            card4_title: 'Свобода и путешествия',
-            card4_desc: 'Работайте онлайн из любой точки мира. Открывайте новые горизонты вместе с успешной командой.',
-            card5_title: 'Личностный рост',
-            card5_desc: 'Постоянное развитие, сильное окружение предпринимателей и раскрытие вашего потенциала.',
-            card6_title: 'Здоровье и Anti-Age',
-            card6_desc: 'Доступ к передовым разработкам: умный иммунитет, омоложение организма и качественная долгая жизнь.',
-            company_badge: 'О Партнере',
+            mission_badge: 'Миссия команды',
+            mission_text: 'Помогая людям через лидерство осуществить их мечты, мы создаем общество разумных, финансово-независимых и свободных людей.',
+            values_badge: 'Ценности компании 4Life',
+            value1_title: 'Наука',
+            value1_desc: 'Инновационные продукты на основе передовых научных исследований и запатентованных технологий.',
+            value2_title: 'Сервис',
+            value2_desc: 'Высочайший уровень обслуживания и забота о каждом партнере и клиенте компании.',
+            value3_title: 'Успех',
+            value3_desc: 'Проверенный путь к финансовой свободе — план развития, стратегия и поддержка наставника.',
+            value4_title: 'Удовлетворенность',
+            value4_desc: 'Радость от результатов, здоровья и качества жизни, которые приносят наши продукты и бизнес.',
+            benefits_badge: 'Работа со мной',
+            benefits_title_html: 'Что вы <span class="accent-text">получаете</span>, работая со мной',
+            ben1_title: 'Готовая система',
+            ben1_desc: 'Полностью упакованная система работы под ключ. Вам не нужно изобретать — просто действуйте по плану.',
+            ben2_title: 'Пошаговая стратегия',
+            ben2_desc: 'Чёткий план выхода на доход — от первых шагов до масштабирования бизнеса по всему миру.',
+            ben3_title: 'Инструменты',
+            ben3_desc: 'Готовые инструменты продвижения и продаж. Шаблоны, скрипты и методики, которые работают.',
+            ben4_title: 'Личное сопровождение',
+            ben4_desc: 'Я лично поддерживаю каждого партнера на всех этапах — от старта до лидерства.',
+            ben5_title: 'Пассивный доход',
+            ben5_desc: 'Выстраивайте сеть один раз и получайте стабильный дивиденд от её оборота многие годы.',
+            ben6_title: 'Здоровье и Anti-Age',
+            ben6_desc: 'Доступ к передовым разработкам: умный иммунитет, омоложение организма и качественная долгая жизнь.',
+            company_badge: 'О Компании',
             company_title_html: 'Компания <span class="brand-text">4Life</span>',
             company_slogan: 'Иммунитет — фундамент вашего здоровья!',
             company_years: 'Я более 5 лет в одном проекте.',
@@ -52,19 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_badge: 'Связь со мной',
             contact_title: 'Готовы начать свой путь?',
             contact_desc: 'Выберите удобный способ связи. Я всегда открыта к диалогу и готова ответить на ваши вопросы.',
+            contact_max: 'Макс',
+            contact_max_label: 'Написать в Макс',
             contact_email_label: 'Написать письмо',
-            footer_brand: 'Александра Очирова — Бизнес-тренер, Лидер 4Life',
-            copyright: '© 2026 Александра Очирова. Независимый дистрибьютор 4Life (ID: 11197938).',
-            lang_label: 'RU'
+            footer_brand: 'Александра Очирова — Предприниматель, Лидер 4Life',
+            copyright: '© 2026 Александра Очирова. Независимый дистрибьютор 4Life (ID: 11197938).'
         },
         en: {
+            lang_label: 'EN',
             nav_about: 'About',
-            nav_opportunities: 'Opportunities',
+            nav_mission: 'Mission',
+            nav_benefits: 'Benefits',
             nav_company: 'Company',
             nav_contact: 'Contact',
-            hero_badge: 'Business Coach & 4Life Leader',
+            hero_badge: 'Entrepreneur & 4Life Leader',
             hero_name_html: 'Alexandra<br><span class="accent-text">Ochirova</span>',
-            hero_desc: 'Building a risk-free business from scratch to a network across countries. Smart immunity, health, and passive income with 4Life.',
+            hero_desc: 'I help people build a risk-free business from scratch using a proven system. Passive income, health, and freedom with 4Life.',
             hero_btn_write: 'Message me',
             hero_btn_shop: '4Life Shop',
             fc_partners: 'Partners',
@@ -81,21 +97,32 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_team: 'Team Members',
             stat_passive: 'Passive',
             stat_income: 'Growing Income',
-            opp_badge: 'Collaboration',
-            opp_title_html: 'This model is <span class="accent-text">perfect for you</span> if you want to:',
-            card1_title: 'Risk-Free Business',
-            card1_desc: 'Start your own business with minimal investment. Full support and a ready-made system.',
-            card2_title: 'First Big Money',
-            card2_desc: 'A step-by-step algorithm to reach a solid income with no earnings ceiling.',
-            card3_title: 'Passive Income',
-            card3_desc: 'Build your network once and receive stable dividends from its turnover for many years.',
-            card4_title: 'Freedom & Travel',
-            card4_desc: 'Work online from anywhere in the world. Discover new horizons with a successful team.',
-            card5_title: 'Personal Growth',
-            card5_desc: 'Constant development, a strong circle of entrepreneurs, and unlocking your full potential.',
-            card6_title: 'Health & Anti-Age',
-            card6_desc: 'Access to cutting-edge innovations: smart immunity, body rejuvenation, and quality longevity.',
-            company_badge: 'About the Partner',
+            mission_badge: 'Our Mission',
+            mission_text: 'By helping people realize their dreams through leadership, we create a society of wise, financially independent, and free people.',
+            values_badge: '4Life Company Values',
+            value1_title: 'Science',
+            value1_desc: 'Innovative products based on cutting-edge scientific research and patented technologies.',
+            value2_title: 'Service',
+            value2_desc: 'The highest level of care and attention to every partner and client of the company.',
+            value3_title: 'Success',
+            value3_desc: 'A proven path to financial freedom — development plan, strategy, and mentor support.',
+            value4_title: 'Satisfaction',
+            value4_desc: 'Joy from the results, health, and quality of life that our products and business bring.',
+            benefits_badge: 'Work with me',
+            benefits_title_html: 'What you <span class="accent-text">get</span> working with me',
+            ben1_title: 'Ready System',
+            ben1_desc: 'A fully packaged turnkey business system. No need to invent — just follow the plan.',
+            ben2_title: 'Step-by-Step Strategy',
+            ben2_desc: 'A clear income plan — from first steps to scaling your business worldwide.',
+            ben3_title: 'Tools',
+            ben3_desc: 'Ready-made promotion and sales tools. Templates, scripts, and proven methods.',
+            ben4_title: 'Personal Support',
+            ben4_desc: 'I personally support every partner at all stages — from launch to leadership.',
+            ben5_title: 'Passive Income',
+            ben5_desc: 'Build your network once and receive stable dividends from its turnover for many years.',
+            ben6_title: 'Health & Anti-Age',
+            ben6_desc: 'Access to cutting-edge innovations: smart immunity, body rejuvenation, and quality longevity.',
+            company_badge: 'About the Company',
             company_title_html: 'Company <span class="brand-text">4Life</span>',
             company_slogan: 'Immunity is the foundation of your health!',
             company_years: 'I\'ve been with this project for over 5 years.',
@@ -105,19 +132,22 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_badge: 'Get in Touch',
             contact_title: 'Ready to start your journey?',
             contact_desc: 'Choose a convenient way to connect. I\'m always open to dialogue and ready to answer your questions.',
+            contact_max: 'Max',
+            contact_max_label: 'Message in Max',
             contact_email_label: 'Send an email',
-            footer_brand: 'Alexandra Ochirova — Business Coach, 4Life Leader',
-            copyright: '© 2026 Alexandra Ochirova. Independent 4Life Distributor (ID: 11197938).',
-            lang_label: 'EN'
+            footer_brand: 'Alexandra Ochirova — Entrepreneur, 4Life Leader',
+            copyright: '© 2026 Alexandra Ochirova. Independent 4Life Distributor (ID: 11197938).'
         },
         kz: {
+            lang_label: 'KZ',
             nav_about: 'Мен туралы',
-            nav_opportunities: 'Мүмкіндіктер',
+            nav_mission: 'Миссия',
+            nav_benefits: 'Не аласыз',
             nav_company: 'Компания',
             nav_contact: 'Байланыс',
-            hero_badge: 'Бизнес-жаттықтырушы және 4Life көшбасшысы',
+            hero_badge: 'Кәсіпкер және 4Life көшбасшысы',
             hero_name_html: 'Александра<br><span class="accent-text">Очирова</span>',
-            hero_desc: 'Түрлі елдердегі желіге дейін нөлден тәуекелсіз бизнес құрамын. 4Life компаниясымен ақылды иммунитетке, денсаулыққа және пассивті табысқа инвестициялар.',
+            hero_desc: 'Адамдарға дайын жүйе арқылы нөлден тәуекелсіз бизнес құруға көмектесемін. 4Life компаниясымен пассивті табыс, денсаулық және еркіндік.',
             hero_btn_write: 'Маған жазу',
             hero_btn_shop: '4Life Дүкені',
             fc_partners: 'Серіктестер',
@@ -134,43 +164,57 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_team: 'Командадағы адамдар',
             stat_passive: 'Пассивті',
             stat_income: 'Өсіп келе жатқан табыс',
-            opp_badge: 'Ынтымақтастық',
-            opp_title_html: 'Бұл модель сізге <span class="accent-text">дәл келеді</span>, егер сіз қаласаңыз:',
-            card1_title: 'Тәуекелсіз бизнес',
-            card1_desc: 'Өз бизнесіңізді ең аз инвестициямен бастаңыз. Толық қолдау және дайын жүйе.',
-            card2_title: 'Алғашқы үлкен ақша',
-            card2_desc: 'Табыстың шегінсіз қатты кіріске қалай жетуге болатындығы туралы қадамдық алгоритм.',
-            card3_title: 'Пассивті табыс',
-            card3_desc: 'Желіңізді бір рет құрыңыз және оның айналымынан көп жылдар бойы тұрақты дивиденд алыңыз.',
-            card4_title: 'Еркіндік және саяхат',
-            card4_desc: 'Әлемнің кез келген нүктесінен онлайн жұмыс жасаңыз. Табысты командамен бірге жаңа көкжиектерді ашыңыз.',
-            card5_title: 'Тұлғалық өсу',
-            card5_desc: 'Үнемі даму, кәсіпкерлердің мықты ортасы және әлеуетіңізді ашу.',
-            card6_title: 'Денсаулық және Anti-Age',
-            card6_desc: 'Озық әзірлемелерге қол жеткізу: ақылды иммунитет, денені жасарту және сапалы ұзақ өмір.',
-            company_badge: 'Серіктес туралы',
+            mission_badge: 'Команда миссиясы',
+            mission_text: 'Көшбасшылық арқылы адамдардың арманын жүзеге асыруға көмектесе отырып, біз ақылды, қаржылық тәуелсіз және еркін адамдардың қоғамын құрамыз.',
+            values_badge: '4Life компаниясының құндылықтары',
+            value1_title: 'Ғылым',
+            value1_desc: 'Озық ғылыми зерттеулер мен патенттелген технологияларға негізделген инновациялық өнімдер.',
+            value2_title: 'Сервис',
+            value2_desc: 'Компанияның әрбір серіктесі мен клиентіне жоғары деңгейдегі сервис пен қамқорлық.',
+            value3_title: 'Табыс',
+            value3_desc: 'Қаржылық еркіндікке жеткен жол — даму жоспары, стратегия және тәлімгер қолдауы.',
+            value4_title: 'Қанағаттану',
+            value4_desc: 'Біздің өнімдер мен бизнес әкелетін нәтижелер, денсаулық және өмір сапасынан қуаныш.',
+            benefits_badge: 'Менімен жұмыс',
+            benefits_title_html: 'Менімен жұмыс жасай отырып, <span class="accent-text">не аласыз</span>',
+            ben1_title: 'Дайын жүйе',
+            ben1_desc: 'Кілтке толығымен жабдықталған жұмыс жүйесі. Ойлап табудың қажеті жоқ — жоспар бойынша әрекет етіңіз.',
+            ben2_title: 'Қадамдық стратегия',
+            ben2_desc: 'Табысқа шығудың нақты жоспары — алғашқы қадамдардан бастап бизнесті масштабтауға дейін.',
+            ben3_title: 'Құралдар',
+            ben3_desc: 'Жылжыту мен сатудың дайын құралдары. Жұмыс істейтін шаблондар, сценарийлер мен әдістемелер.',
+            ben4_title: 'Жеке қолдау',
+            ben4_desc: 'Мен әрбір серіктесті барлық кезеңдерде — старттан көшбасшылыққа дейін жеке қолдаймын.',
+            ben5_title: 'Пассивті табыс',
+            ben5_desc: 'Желіңізді бір рет құрыңыз және оның айналымынан көп жылдар бойы тұрақты дивиденд алыңыз.',
+            ben6_title: 'Денсаулық және Anti-Age',
+            ben6_desc: 'Озық әзірлемелерге қол жеткізу: ақылды иммунитет, денені жасарту және сапалы ұзақ өмір.',
+            company_badge: 'Компания туралы',
             company_title_html: 'Компания <span class="brand-text">4Life</span>',
             company_slogan: 'Иммунитет — сіздің денсаулығыңыздың іргетасы!',
             company_years: 'Мен бір жобада 5 жылдан астам уақыт жүрмін.',
-            company_about_html: '<strong>4Life Research</strong> — The Immune System Company™ (Иммундық жүйе компаниясы). Өмір үшін зерттеу. Бұл сіздің иммунитетіңізді дұрыс жұмыс істеуге үйрететін трансфер факторларына негізделген инновациялық өнімдер.',
+            company_about_html: '<strong>4Life Research</strong> — The Immune System Company™ (Иммундық жүйе компаниясы). Өмір үшін зерттеу. Сіздің иммунитетіңізді дұрыс жұмыс істеуге үйрететін трансфер факторларына негізделген инновациялық өнімдер.',
             company_join: 'Менің командама қосылу арқылы сіз тек бизнес-тәлімгерді ғана емес, сонымен қатар отбасыңыздың денсаулығына арналған озық өнімдерге қол жеткізесіз.',
             company_btn: 'Дүкенді көру',
             contact_badge: 'Менімен байланыс',
-            contact_title: 'Сапарыңызды бастауға дайынсыз ба?',
-            contact_desc: 'Сөйлесудің ыңғайлы әдісін таңдаңыз. Мен әрқашан диалогқа ашықпын және сұрақтарыңызға жауап беруге дайынмын.',
+            contact_title: 'Жолыңызды бастауға дайынсыз ба?',
+            contact_desc: 'Ыңғайлы байланыс әдісін таңдаңыз. Мен әрқашан диалогқа ашықпын және сұрақтарыңызға жауап беруге дайынмын.',
+            contact_max: 'Макс',
+            contact_max_label: 'Макс-қа жазу',
             contact_email_label: 'Хат жазу',
-            footer_brand: 'Александра Очирова — Бизнес-жаттықтырушы, 4Life Көшбасшысы',
-            copyright: '© 2026 Александра Очирова. 4Life тәуелсіз дистрибьюторы (ID: 11197938).',
-            lang_label: 'KZ'
+            footer_brand: 'Александра Очирова — Кәсіпкер, 4Life Көшбасшысы',
+            copyright: '© 2026 Александра Очирова. 4Life тәуелсіз дистрибьюторы (ID: 11197938).'
         },
         zh: {
+            lang_label: 'ZH',
             nav_about: '关于我',
-            nav_opportunities: '机会',
+            nav_mission: '使命',
+            nav_benefits: '您将获得',
             nav_company: '公司',
             nav_contact: '联系我',
-            hero_badge: '商业教练 & 4Life 领导人',
+            hero_badge: '企业家 & 4Life 领导人',
             hero_name_html: '亚历山德拉<br><span class="accent-text">奥奇罗娃 (Alexandra)</span>',
-            hero_desc: '从零开始建立跨国网络的无风险业务。与4Life一起投资于智能免疫力、健康和被动收入。',
+            hero_desc: '我帮助人们通过成熟的系统从零开始建立无风险的业务。与4Life一起实现被动收入、健康和自由。',
             hero_btn_write: '给我发消息',
             hero_btn_shop: '4Life 商店',
             fc_partners: '合作伙伴',
@@ -187,21 +231,32 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_team: '团队成员',
             stat_passive: '被动',
             stat_income: '稳定增长收入',
-            opp_badge: '合作机会',
-            opp_title_html: '如果您想实现以下目标，此模式<span class="accent-text">非常适合您</span>：',
-            card1_title: '无风险业务',
-            card1_desc: '以最小的投资开启您的事业。提供全面支持和成熟的系统。',
-            card2_title: '第一桶金',
-            card2_desc: '循序渐进的算法，助您获得可观的收入，且没有收入上限。',
-            card3_title: '被动收入',
-            card3_desc: '一次建立网络，多年来从其营业额中获得稳定的红利。',
-            card4_title: '自由与旅行',
-            card4_desc: '在世界任何地方在线工作。与成功的团队一起开拓新视野。',
-            card5_title: '个人成长',
-            card5_desc: '不断发展，融入强大的企业家圈子，释放您的潜力。',
-            card6_title: '健康与抗衰老',
-            card6_desc: '获得前沿创新成果：智能免疫力、身体年轻化和高质量的长寿。',
-            company_badge: '关于合作伙伴',
+            mission_badge: '团队使命',
+            mission_text: '通过领导力帮助人们实现梦想，我们创建一个理性、财务独立和自由的人的社会。',
+            values_badge: '4Life 公司价值观',
+            value1_title: '科学',
+            value1_desc: '基于前沿科学研究和专利技术的创新产品。',
+            value2_title: '服务',
+            value2_desc: '对公司每位合作伙伴和客户提供最高水平的服务和关怀。',
+            value3_title: '成功',
+            value3_desc: '通往财务自由的可靠道路 — 发展计划、战略和导师支持。',
+            value4_title: '满意',
+            value4_desc: '因我们的产品和业务带来的成果、健康和生活质量而感到喜悦。',
+            benefits_badge: '与我合作',
+            benefits_title_html: '与我合作，您将<span class="accent-text">获得</span>什么',
+            ben1_title: '成熟系统',
+            ben1_desc: '完全打包的交钥匙工作系统。无需发明 — 只需按照计划行动。',
+            ben2_title: '逐步战略',
+            ben2_desc: '明确的收入计划 — 从第一步到全球业务扩展。',
+            ben3_title: '工具',
+            ben3_desc: '现成的推广和销售工具。经过验证的模板、脚本和方法。',
+            ben4_title: '个人指导',
+            ben4_desc: '我亲自在所有阶段支持每位合作伙伴 — 从启动到成为领导者。',
+            ben5_title: '被动收入',
+            ben5_desc: '一次建立网络，多年来从其营业额中获得稳定的红利。',
+            ben6_title: '健康与抗衰老',
+            ben6_desc: '获得前沿创新成果：智能免疫力、身体年轻化和高质量的长寿。',
+            company_badge: '关于公司',
             company_title_html: '<span class="brand-text">4Life</span> 公司',
             company_slogan: '免疫力是您健康的基础！',
             company_years: '我参与这个项目已经五年多了。',
@@ -210,11 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
             company_btn: '参观商店',
             contact_badge: '联系我',
             contact_title: '准备好开启您的旅程了吗？',
-            contact_desc: '选择一种方便的联系方式。我随时准备进行对话并回答您的问题。',
+            contact_desc: '选择一种方便的联系方式。我随时准备与您对话并回答您的问题。',
+            contact_max: 'Max',
+            contact_max_label: '在Max中发消息',
             contact_email_label: '发送电子邮件',
-            footer_brand: '亚历山德拉·奥奇罗娃 — 商业教练，4Life 领导人',
-            copyright: '© 2026 亚历山德拉·奥奇罗娃 (Alexandra Ochirova). 独立 4Life 经销商 (ID: 11197938).',
-            lang_label: 'ZH'
+            footer_brand: '亚历山德拉·奥奇罗娃 — 企业家，4Life 领导人',
+            copyright: '© 2026 亚历山德拉·奥奇罗娃 (Alexandra Ochirova). 独立 4Life 经销商 (ID: 11197938).'
         }
     };
 
@@ -243,46 +299,37 @@ document.addEventListener('DOMContentLoaded', () => {
             langLabel.textContent = dict.lang_label;
         }
 
-        // Update active class in dropdown menu
+        // Update active class in dropdown
         document.querySelectorAll('.lang-option').forEach(btn => {
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
+            btn.classList.toggle('active', btn.dataset.lang === lang);
         });
     }
 
     // ═══════════════════════════════════════════
-    // DROPDOWN MENU LOGIC
+    // DROPDOWN MENU
     // ═══════════════════════════════════════════
     const langToggleBtn = document.getElementById('langToggle');
     const langMenu = document.getElementById('langMenu');
 
     if (langToggleBtn && langMenu) {
-        // Toggle menu on click
         langToggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             langMenu.classList.toggle('show');
         });
 
-        // Handle option click
         document.querySelectorAll('.lang-option').forEach(option => {
             option.addEventListener('click', (e) => {
-                const selectedLang = e.target.dataset.lang;
-                setLanguage(selectedLang);
+                setLanguage(e.target.dataset.lang);
                 langMenu.classList.remove('show');
             });
         });
 
-        // Close when clicking outside
         document.addEventListener('click', (e) => {
             if (!langToggleBtn.contains(e.target) && !langMenu.contains(e.target)) {
                 langMenu.classList.remove('show');
             }
         });
     }
-
 
     // ═══════════════════════════════════════════
     // THEME TOGGLE
@@ -293,18 +340,13 @@ document.addEventListener('DOMContentLoaded', () => {
         currentTheme = theme;
         localStorage.setItem('theme', theme);
         document.documentElement.setAttribute('data-theme', theme);
-
         const icon = document.getElementById('themeIcon');
-        if (icon) {
-            icon.className = theme === 'dark' ? 'ph ph-sun' : 'ph ph-moon';
-        }
+        if (icon) icon.className = theme === 'dark' ? 'ph ph-sun' : 'ph ph-moon';
     }
 
-    // Init on load
     setTheme(currentTheme);
     setLanguage(currentLang);
 
-    // Theme toggle button
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -313,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ═══════════════════════════════════════════
-    // CURSOR (Desktop)
+    // CURSOR
     // ═══════════════════════════════════════════
     const cursor = document.querySelector('.cursor');
     if (cursor && window.matchMedia('(pointer: fine)').matches) {
@@ -321,9 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-
-        const hoverables = document.querySelectorAll('a, button');
-        hoverables.forEach(elem => {
+        document.querySelectorAll('a, button').forEach(elem => {
             elem.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
                 cursor.style.backgroundColor = 'rgba(0, 203, 169, 0.2)';
@@ -355,12 +395,10 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.add('open');
             document.body.style.overflow = 'hidden';
         });
-
         menuClose.addEventListener('click', () => {
             mobileMenu.classList.remove('open');
             document.body.style.overflow = '';
         });
-
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
@@ -392,9 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
